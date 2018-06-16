@@ -27,6 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOG_ROOT = os.path.join(BASE_DIR, 'logs')
+if not os.path.isdir(LOG_ROOT):
+    os.mkdir(LOG_ROOT)
 
 # Application definition
 
@@ -132,5 +137,62 @@ SWAGGER_SETTINGS = {
         'basic': {
             'type': 'basic'
         }
+    },
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        # 'verbose': {
+        #     'format': '%(asctime)s %(levelname)s %(name)s %(module)s [%(message)s]'
+        # },
+        'verbose_syslog': {
+            'format': '%(asctime)s %(hostname)s glue: %(levelname)s|%(name)s_%(module)s|%(request_id)s:%(user_id)s|[%(message)s %(data)s]'
+        },
+        'simple': {
+            'format': '%(asctime)s %(levelname)s %(request_id)s:%(user_id)s [%(message)s %(data)s]'
+        },
+        'verbose_django': {
+            'format': '%(asctime)s %(levelname)s %(name)s_%(module)s %(request_id)s:%(user_id)s [%(message)s %(data)s]'
+        },
+        'tasker': {
+            'format': 'tasker %(levelname)s %(name)s_%(module)s %(funcName)s %(request_id)s:%(user_id)s [%(message)s %(data)s]'
+        },
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler'
+        },
+        'logfile': {
+            'level': 'DEBUG',
+            'class': 'cloghandler.ConcurrentRotatingFileHandler',
+            'maxBytes': 52428800,
+            'filename': os.path.join(LOG_ROOT, "logfile"),
+            'formatter': 'verbose_django',
+        },
+        'console': {
+            'level': 'WARNING',
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['logfile'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'django': {
+            'handlers': ['logfile'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'django_request': {
+            'handlers': ['logfile'],
+            'level': 'DEBUG',  # change debug level as appropiate
+            'propagate': False,
+        },
     },
 }
