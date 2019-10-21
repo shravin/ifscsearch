@@ -78,7 +78,7 @@ future==0.16.0
 graphviz==0.8.2
 holidays==0.8.1
 html5lib==0.999999999
-httpie==0.9.6
+httpie==1.0.3
 idna==2.6
 incremental==16.10.1
 ipykernel==4.7.0
