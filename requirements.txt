@@ -114,7 +114,7 @@ nbformat==4.4.0
 ngxtop==0.0.2
 nltk==3.2.2
 nose==1.3.7
-notebook==5.2.2
+notebook==5.7.8
 numpy==1.12.0
 oauthlib==2.0.0
 olefile==0.44
