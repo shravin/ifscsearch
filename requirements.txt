@@ -36,7 +36,7 @@ cycler==0.10.0
 decorator==4.0.10
 deepdiff==2.5.3
 defusedxml==0.4.1
-Django==1.10.3
+Django==1.11.28
 django-allauth==0.28.0
 django-bootstrap3==8.1.0
 django-celery-beat==1.0.1
