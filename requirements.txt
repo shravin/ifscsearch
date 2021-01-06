@@ -16,7 +16,7 @@ botocore==1.4.93
 bs4==0.0.1
 CacheControl==0.12.4
 cairocffi==0.8.0
-CairoSVG==2.0.3
+CairoSVG==2.5.1
 celery==4.0.2
 certifi==2018.1.18
 cffi==1.8.3
