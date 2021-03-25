@@ -158,7 +158,7 @@ python-pptx==0.6.5
 python3-keyczar==0.71rc0
 python3-openid==3.0.10
 pytz==2018.4
-PyYAML==3.12
+PyYAML==5.4
 pyzmq==16.0.3
 qtconsole==4.3.1
 raven==6.1.0
