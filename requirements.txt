@@ -97,7 +97,7 @@ jupyter-core==4.4.0
 kombu==4.0.2
 ldclient-py==5.0.4
 line-profiler==2.1.2
-lxml==3.6.4
+lxml==4.6.3
 mammoth==1.4.1
 MarkupSafe==1.0
 matplotlib==2.0.0
