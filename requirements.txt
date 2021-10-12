@@ -119,7 +119,7 @@ numpy==1.12.0
 oauthlib==2.0.0
 olefile==0.44
 openapi-codec==1.1.7
-opencv-python==3.3.0.9
+opencv-python==3.4.7.28
 packaging==16.8
 pandas==0.19.2
 pandocfilters==1.4.2
