@@ -17,7 +17,7 @@ bs4==0.0.1
 CacheControl==0.12.4
 cairocffi==0.8.0
 CairoSVG==2.0.3
-celery==4.0.2
+celery==5.2.2
 certifi==2018.1.18
 cffi==1.8.3
 chardet==3.0.4
