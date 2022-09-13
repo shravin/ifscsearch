@@ -72,7 +72,7 @@ enum34==1.1.6
 Faker==0.7.3
 fdfgen==0.16.0
 flake8==3.2.1
-flower==0.9.1
+flower==1.2.0
 freezegun==0.3.10
 future==0.16.0
 graphviz==0.8.2
